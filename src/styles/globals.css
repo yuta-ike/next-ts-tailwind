@@ -1,3 +1,14 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+.emoji-picker-wrapper > * {
+  display: none;
+}
+.emoji-picker-wrapper > *:first-child {
+  display: flex;
+}
+
+em-emoji-picker {
+  --font-size: 12px;
+}

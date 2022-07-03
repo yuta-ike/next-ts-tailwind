@@ -1,11 +1,17 @@
-import Document, { DocumentContext } from "next/document"
+import { Head, Html, Main, NextScript } from "next/document"
+import Script from "next/script"
 
-class MyDocument extends Document {
-  static async getInitialProps(ctx: DocumentContext) {
-    const initialProps = await Document.getInitialProps(ctx)
-
-    return initialProps
-  }
+const Document = () => {
+  return (
+    <Html lang="ja">
+      <Head>
+        <Script src="https://twemoji.maxcdn.com/v/latest/twemoji.min.js" crossOrigin="anonymous" />
+      </Head>
+      <body className="min-h-[100dvh] min-h-screen bg-bgwhite text-black">
+        <Main />
+        <NextScript />
+      </body>
+    </Html>
+  )
 }
-
-export default MyDocument
+export default Document
